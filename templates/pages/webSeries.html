@@ -1,0 +1,134 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="ThemeStarz">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'home/bootstrap/css/bootstrap.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'home/fonts/font-awesome.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'home/css/selectize.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'home/css/owl.carousel.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'home/css/user.css' %}">
+
+	<title> TeraMovies | Web Series </title>
+
+</head>
+<body>
+
+        <section class="content">
+            <section class="block">
+                <div class="container">
+                    <div class="row">
+                        
+                        <div class="col-md-9">
+                          
+                            <section>
+                                
+                             
+                                <div class="gallery-carousel owl-carousel">
+                                    <img src="{{series.poster.url}}" alt="" data-hash="1">
+                                    <img src="{% static 'home/img/image-01.jpg' %}" alt="" data-hash="2">
+                                    <img src="{% static 'home/img/image-21.jpg' %}" alt="" data-hash="3">
+                                    <img src="{% static 'home/img/image-22.jpg' %}" alt="" data-hash="4">
+                                    <img src="{% static 'home/img/image-23.jpg' %}" alt="" data-hash="5">
+                                    <img src="{% static 'home/img/image-14.jpg' %}" alt="" data-hash="6">
+                                    <img src="{% static 'home/img/image-14.jpg' %}" alt="" data-hash="7">
+                                    <img src="{% static 'home/img/image-14.jpg' %}" alt="" data-hash="8">
+                                    <img src="{% static 'home/img/image-14.jpg' %}" alt="" data-hash="9">
+                                    <img src="{% static 'home/img/image-14.jpg' %}" alt="" data-hash="10">
+                                    <img src="{% static 'home/img/image-14.jpg' %}" alt="" data-hash="11">
+                                    <img src="{% static 'home/img/image-14.jpg' %}" alt="" data-hash="12">
+                                    <img src="{% static 'home/img/image-14.jpg' %}" alt="" data-hash="13">
+                                    <img src="{% static 'home/img/image-14.jpg' %}" alt="" data-hash="14">
+                                    <img src="{% static 'home/img/image-14.jpg' %}" alt="" data-hash="15">
+                                </div>
+                                <div class="gallery-carousel-thumbs owl-carousel">
+   <a href="#1" class="owl-thumb active-thumb background-image"> <img src="{{series.poster.url}}" alt="">  </a>
+   <a href="#2" class="owl-thumb background-image"> <img src="{% static 'home/img/image-01.jpg' %}" alt=""> </a>
+   <a href="#3" class="owl-thumb background-image"> <img src="{% static 'home/img/image-21.jpg' %}" alt=""> </a>
+   <a href="#4" class="owl-thumb background-image"> <img src="{% static 'home/img/image-22.jpg' %}" alt=""> </a>
+   <a href="#5" class="owl-thumb background-image"> <img src="{% static 'home/img/image-23.jpg' %}" alt=""> </a>
+   <a href="#6" class="owl-thumb background-image"> <img src="{% static 'home/img/image-14.jpg' %}" alt=""> </a>
+   <a href="#7" class="owl-thumb background-image"> <img src="{% static 'home/img/image-01.jpg' %}" alt=""> </a>
+   <a href="#8" class="owl-thumb background-image"> <img src="{% static 'home/img/image-21.jpg' %}" alt=""> </a>
+   <a href="#9" class="owl-thumb background-image"> <img src="{% static 'home/img/image-22.jpg' %}" alt=""> </a>
+   <a href="#10" class="owl-thumb background-image"> <img src="{% static 'home/img/image-23.jpg' %}" alt=""> </a>
+   <a href="#11" class="owl-thumb background-image"> <img src="{% static 'home/img/image-14.jpg' %}" alt=""> </a>
+   <a href="#12" class="owl-thumb background-image"> <img src="{% static 'home/img/image-01.jpg' %}" alt=""> </a>
+   <a href="#13" class="owl-thumb background-image"> <img src="{% static 'home/img/image-21.jpg' %}" alt=""> </a>
+   <a href="#14" class="owl-thumb background-image"> <img src="{% static 'home/img/image-01.jpg' %}" alt=""> </a>
+   <a href="#15" class="owl-thumb background-image"> <img src="{% static 'home/img/image-21.jpg' %}" alt=""> </a>
+    
+                                </div>
+                            </section>
+                           
+                            <section>
+                                <h2>Description</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec tincidunt arcu, sit
+                                    amet fermentum sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+                                    per inceptos himenaeos. Vestibulum tincidunt, sapien sagittis sollicitudin dapibus,
+                                    risus mi euismod elit, in dictum justo lacus sit amet dui. Sed faucibus vitae nisl
+                                    at dignissim.
+                                </p>
+                            </section>
+                           
+                             <section>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                       
+                                        
+                                    </div>
+                                    <div class="col-md-8">
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </section>
+                           
+                            <section>
+                               
+                            </section>
+                          
+                        </div>
+                        
+                        
+                        
+                      
+                    </div>
+                </div>
+                <!--end container-->
+            </section>
+            <!--end block-->
+        </section>
+        <!--end content-->
+
+
+    </div>
+    <!--end page-->
+
+	<script src="{% static 'home/js/jquery-3.3.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'home/js/popper.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'home/bootstrap/js/bootstrap.min.js' %}"></script>
+   
+	<script src="{% static 'home/js/selectize.min.js' %}"></script>
+	<script src="{% static 'home/js/icheck.min.js' %}"></script>
+	<script src="{% static 'home/js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'home/js/jquery.validate.min.js' %}"></script>
+	<script src="{% static 'home/js/custom.js' %}"></script>
+
+    <script>
+        var latitude = 51.511971;
+        var longitude = -0.137597;
+        var markerImage = "{% static 'home/img/map-marker.png' %}";
+        var mapTheme = "light";
+        var mapElement = "map-small";
+        simpleMap(latitude, longitude, markerImage, mapTheme, mapElement);
+    </script>
+
+</body>
+</html>

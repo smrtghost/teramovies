@@ -1,0 +1,61 @@
+{% extends 'contactbase.html' %}
+{% load static %}
+{% block body %}
+          
+            <h3> Send Report On our Videos</h3>
+            <form method="post" action="/report" class="mb-5" id="contactForm" name="contactForm">
+            {% csrf_token %}
+              <div class="row">
+               
+                <div class="col-md-6 form-group mb-5">
+                  <label for="repname" class="col-form-label">Full Name *</label>
+                  <input type="text" class="form-control" name="repname" id="repname" placeholder="Your name">
+                </div>
+                <div class="col-md-6 form-group mb-5">
+                  <label for="repemail" class="col-form-label">Your Email ID *</label>
+                  <input type="email" class="form-control" name="repemail" id="repemail"  placeholder="Your Your email">
+                </div>
+              </div>
+              
+                <div class="row">
+                <div class="col-md-6 form-group mb-5">
+                  <label for="repissue" class="col-form-label">Issue Type</label>
+                  <input type="text" class="form-control" name="repissue" id="repissue"  placeholder="I'm owner of that">
+                </div>
+                <div class="col-md-6 form-group mb-5">
+                  <label for="replink" class="col-form-label"> Attach Link </label>
+                  <input type="text" class="form-control" name="replink" id="replink"  placeholder=" send link from our site">
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-12 form-group mb-5">
+                  <label for="repmessage" class="col-form-label">Expain More About Issue</label>
+                  <textarea class="form-control" name="repmessage" id="repmessage" cols="30" rows="4"  placeholder="explain us briefly ..."></textarea>
+                </div>
+              </div>
+              
+              
+ 		
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <input type="submit" value="Send Message" class="btn btn-primary rounded-0 py-2 px-4">
+                  <span class="submitting"></span>
+                </div>
+              </div>
+            </form>
+
+            
+
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-info h-100">
+            <h3>Report Page</h3>
+            <p class="mb-5">For any Help and Support you can contact us through contact page</p>
+            <p class="mb-5"> We are Strictly against 18+ contents that may harm youth's carrier, please send a report if you see on our website </p>
+            <p class="mb-5"> If You're Owner and our site containing your file, please send a report  </p>
+            <p class="mb-5"> For More information please read our Terms & Condition page and also About Section  </p>
+            <p class="mb-5"> Please Check Your Gmail after contact us, our team will work as soon as possible  </p>
+          
+{% endblock %}

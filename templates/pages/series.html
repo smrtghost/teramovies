@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% static "poster" as baseUrl %}
+{% block body %}
+
+
+        <section class="content">
+         {% if user.is_authenticated %}
+            <section class="block">
+            <!-- add poster -->
+              {% for series in seriess %}
+                <div class="container">
+                 
+  <!--============ Items==========================================================================-->
+                    <div class="items grid grid-xl-4-items grid-lg-4-items grid-md-4-items">
+                        <div class="item">
+                            <div class="ribbon-featured">{{series.ribbon}}</div>
+                            <!--end ribbon-->
+                            <div class="wrapper">
+                                <div class="image">
+                                    <h3>
+                                        <a class="tag category">{{series.types}}</a>
+                                        <a class="title">{{series.name}}</a>
+                                        <span class="tag">{{series.lang}}</span>
+                                    </h3>
+                                    <a href="{{series.spclnks}}" class="image-wrapper background-image">
+                                        <img src="{{series.poster.url}}" alt="{{series.name}}">
+                                    </a>
+                                </div>
+                                <!--end image-->
+                                <h4><a>{{series.quality}}</a>
+                                </h4>
+                                <div class="price">{{series.price}}</div>
+                                <div class="meta">
+                                    <figure>
+                                        <i class="fa fa-calendar-o"></i>{{series.timeStamp}}
+                                    </figure>
+                                    <figure>
+                                        <a href="#">
+                                            <i class="fa fa-user"></i>{{series.hero}}
+                                        </a>
+                                    </figure>
+                                </div>
+                                <!--end meta-->
+                                <div class="description">
+                                    <p>{{series.about}}</p>
+                                </div>
+                                <!--end description-->
+                                <a href="{{series.embededlink}}" class="detail text-caps underline">Download Now</a>
+                            </div>
+                        </div>
+                        <!--end item-->
+
+
+ {% endfor %}
+                    </div>
+                  
+                </div>
+                <!--end container-->
+            </section>
+            <!--end block-->
+        </section>
+
+ {% endif %}
+
+
+{% endblock %}

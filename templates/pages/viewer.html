@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load static %}
+{% static "poster" as baseUrl %}
+{% block body %}
+
+      <section class="content">
+           	 {% if user.is_authenticated %}
+            <!--============ Featured Ads ===========================================================================-->
+            <section class="block">
+            <!-- add poster -->
+               {% for movie in movies %}
+                <div class="container">
+                   
+                    <div class="items grid grid-xl-3-items grid-lg-3-items grid-md-2-items">
+                        <div class="item">
+                            <div class="wrapper">
+                                <div class="image">
+                                    <h3>
+                                        <a href="{{movie.watch}}" class="tag category">{{movie.types}}</a>
+                                        <a class="title">{{movie.name}}</a>
+                                        <span class="tag">{{movie.lang}}</span>
+                                    </h3>
+                                    <a href="{{movie.spclnks}}" class="image-wrapper background-image">
+                                        <img src="{{movie.poster.url}}" alt="">
+                                    </a>
+                                </div>
+                                <!--end image-->
+                                <h4 > <a>{{movie.quality}}</a> </h4>
+                                <div class="price">{{movie.price}}</div>
+                                <div class="meta">
+                                    <figure>
+                                        <i class="fa fa-calendar-o"></i>{{movie.date}}
+                                    </figure>
+                                    <figure>
+                                        <a><i class="fa fa-user"></i>{{movie.hero}}</a>
+                                        <a><i class="fa fa-user"></i>{{movie.heroine}}</a>
+                                       
+                                    </figure>
+                                </div>
+                                <!--end meta-->
+                                <div class="description">
+                                    <p>{{movie.about}} </p>
+                                </div>
+                                <!--end description-->
+                                <a href="{{movie.embededlink}}" class="detail text-caps underline">Download Now</a>
+                            </div>
+                        </div>
+                        <!--end item-->
+                          {% endfor %}
+                    </div>
+                </div>
+                <div class="background" data-background-color="#fff"></div>
+                <!--end background-->
+            </section>
+            <!--============ End Featured Ads =======================================================================-->
+
+ {% endif %}
+
+
+
+{% endblock %}

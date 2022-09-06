@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% static "poster" as baseUrl %}
+{% block body %}
+
+
+        <section class="content">
+         {% if user.is_authenticated %}
+            <section class="block">
+            <!-- add poster -->
+               {% for cinema in cinemas %}
+                <div class="container">
+                 
+                    <!--============ Items ==========================================================================-->
+                    <div class="items grid grid-xl-4-items grid-lg-4-items grid-md-4-items">
+                        <div class="item">
+                            <div class="ribbon-featured">{{cinema.ribbon}}</div>
+                            <!--end ribbon-->
+                            <div class="wrapper">
+                                <div class="image">
+                                    <h3>
+                                        <a  class="tag category">{{cinema.types}}</a>
+                                        <a class="title">{{cinema.name}}</a>
+                                        <span class="tag">{{cinema.lang}}</span>
+                                    </h3>
+                                    <a href="{{cinema.spclnks}}" class="image-wrapper background-image">
+                                        <img src="{{cinema.poster.url}}" alt="{{cinema.name}}">
+                                    </a>
+                                </div>
+                                <!--end image-->
+                                <h4><a>{{cinema.quality}}</a>  </h4>
+                                <div class="price">{{cinema.price}}</div>
+                                <div class="meta">
+                                    <figure>
+                                        <i class="fa fa-calendar-o"></i>{{cinema.timeStamp}}
+                                    </figure>
+                                    <figure>
+                                        <a href="#">
+                                            <i class="fa fa-user"></i>{{cinema.hero}}
+                                        </a>
+                                    </figure>
+                                </div>
+                                <!--end meta-->
+                                <div class="description">
+                                    <p>{{cinema.about}}</p>
+                                </div>
+                                <!--end description-->
+                                <a href="{{cinema.embededlink}}" class="detail text-caps underline">Download Now</a>
+                            </div>
+                        </div>
+                        <!--end item-->
+
+
+ {% endfor %}
+                    </div>
+                  
+                </div>
+                <!--end container-->
+            </section>
+            <!--end block-->
+        </section>
+
+ {% endif %}
+
+
+{% endblock %}

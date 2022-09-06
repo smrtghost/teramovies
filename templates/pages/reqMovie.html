@@ -1,0 +1,56 @@
+{% extends 'contactbase.html' %}
+{% load static %}
+{% block body %}
+          
+            <h3>Request Movie / Webseries </h3>
+            <form method="post" action="/requestmovie" class="mb-5" id="contactForm" name="contactForm">
+            {% csrf_token %}
+              <div class="row">
+                <div class="col-md-6 form-group mb-5">
+                  <label for="reqname" class="col-form-label">Full Name *</label>
+                  <input type="text" class="form-control" name="reqname" id="reqname" placeholder="Your name">
+                </div>
+                <div class="col-md-6 form-group mb-5">
+                  <label for="reqemail" class="col-form-label">Primary Email *</label>
+                  <input type="email" class="form-control" name="reqemail" id="reqemail"  placeholder="Your Primary email">
+                </div>
+              </div>
+
+               <div class="row">
+                <div class="col-md-6 form-group mb-5">
+                  <label for="reqmovie" class="col-form-label">Movie Name</label>
+                  <input type="text" class="form-control" name="reqmovie" id="reqmovie"  placeholder="Send Movie Name">
+                </div>
+                <div class="col-md-6 form-group mb-5">
+                  <label for="filmname" class="col-form-label"> Attach Link </label>
+                  <input type="text" class="form-control" name="filmname" id="filmname"  placeholder=" Attach Link">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 form-group mb-5">
+                  <label for="explnmovie" class="col-form-label">Say Something About that Movie</label>
+                  <textarea class="form-control" name="explnmovie" id="explnmovie" cols="30" rows="4"  placeholder="explain us briefly ..."></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <input type="submit" value="Send Message" class="btn btn-primary rounded-0 py-2 px-4">
+                  <span class="submitting"></span>
+                </div>
+              </div>
+            </form>
+
+            
+
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-info h-100">
+            <h3>Request Movie</h3>
+            <p class="mb-5">For any Help and Support you can contact us through contact page</p>
+            <p class="mb-5"> If You want something , please send a request message from top of our website  </p>
+            <p class="mb-5"> also Attach a link of that , so we can find easily what you're talking about </p>
+            <p class="mb-5"> Check Your Gmail after contact with us  </p>
+
+{% endblock %}
