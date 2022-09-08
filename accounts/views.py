@@ -6,7 +6,7 @@ from django.contrib import messages
 
 # Declear Variable that should match refferel id
 
-refId = "secretcode"
+refId = "FreeForAll"
 
 # Create your views here.
     

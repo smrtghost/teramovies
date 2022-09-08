@@ -35,8 +35,8 @@ class HinCinema(models.Model):
     spclnks = models.CharField(max_length=100, blank=True, default="#")
     price = models.CharField(max_length=20, default="Free")
     timeStamp = models.DateTimeField(auto_now_add=True, blank=True)
-    hero = models.CharField(max_length=20, default="")
-    heroine = models.CharField(max_length=20, default="")  
+    hero = models.CharField(max_length=20, default="", blank=True)
+    heroine = models.CharField(max_length=20, default="", blank=True)  
     about = models.CharField(max_length=200, default="Nothing Updated Yet")
 #    [ terabox link direct connect to video player ]
     watch = models.CharField(max_length=20, blank=True, default="hincinema")
@@ -58,8 +58,8 @@ class HinWebseries(models.Model):
     spclnks = models.CharField(max_length=100, blank=True, default="#")
     price = models.CharField(max_length=20, default="Free")
     timeStamp = models.DateTimeField(auto_now_add=True, blank=True)
-    hero = models.CharField(max_length=20, default="")
-    heroine = models.CharField(max_length=20, default="")  
+    hero = models.CharField(max_length=20, default="", blank=True)
+    heroine = models.CharField(max_length=20, default="", blank=True)  
     about = models.CharField(max_length=200, default="Nothing Updated Yet")
 #    [ terabox link direct connect to video player ]
     watch = models.CharField(max_length=20, blank=True, default="hinwebseries")

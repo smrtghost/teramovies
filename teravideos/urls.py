@@ -32,5 +32,5 @@ urlpatterns = [
     path('report', include('report.urls')),
     path('requestmovie', include('requestmovie.urls')),
     
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
